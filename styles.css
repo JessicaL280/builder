@@ -1,0 +1,151 @@
+/* GENERAL PAGE STYLES */
+body {
+  background: #faf6fb;
+  font-family: 'McLaren', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* MENU PAGE */
+.menu-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-button {
+  padding: 16px 28px;
+  background: #ffeef7;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 0 14px rgba(255, 200, 240, 0.4);
+}
+
+.menu-button:hover {
+  background: #ffe3f2;
+}
+
+/* BACK BUTTON */
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  background: #ffeef7;
+  padding: 10px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,200,240,0.4);
+  color: #333;
+}
+
+.back-button:hover {
+  background: #ffe3f2;
+}
+
+/* BIG EDIT BOX */
+.move-box {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  width: 600px;
+  min-width: 350px;
+  min-height: 320px;
+  padding: 40px;
+  padding-top: 80px;
+  border-radius: 35px;
+  background: linear-gradient(135deg, #fff7fa, #f3fff7, #fff8f2);
+  box-shadow: 0 0 40px rgba(255, 200, 240, 0.35);
+  border: 2px solid rgba(255, 220, 240, 0.5);
+}
+
+/* DRAG HEADER */
+.drag-header-big {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(255, 247, 250, 0.9), rgba(243, 255, 247, 0.9), rgba(255, 248, 242, 0.9));
+  box-shadow: 0 0 18px rgba(255, 200, 240, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+}
+
+.drag-header-big:active {
+  cursor: grabbing;
+}
+
+.drag-header-icons span {
+  font-size: 18px;
+}
+
+/* RESIZE HANDLE */
+.resize-handle {
+  width: 22px;
+  height: 22px;
+  background: rgba(255, 200, 240, 0.7);
+  border-radius: 6px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: se-resize;
+}
+
+/* BIG BOX CONTROLS */
+.big-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.big-controls label {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* INNER BOXES */
+.inner-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inner-box {
+  background: #ffffff;
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(255, 200, 240, 0.25);
+  border-left: 4px solid #e8c28f;
+  cursor: grab;
+}
+
+.inner-box.dragging {
+  opacity: 0.6;
+}
+
+.inner-title {
+  font-family: 'Handlee', cursive;
+  font-size
