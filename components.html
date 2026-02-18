@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Osioiden muokkaus</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <a href="index.html" class="back-button">← Takaisin builderin alkuun</a>
+
+  <div class="move-box" id="moveBox">
+
+    <!-- Drag header -->
+    <div class="drag-header-big" id="dragHeader">
+      <div>Siirrä laatikkoa tästä</div>
+      <div class="drag-header-icons">
+        <span>🌸</span><span>🐾</span><span>✨</span>
+      </div>
+    </div>
+
+    <!-- Big box controls -->
+    <div class="big-controls">
+      <label>Taustaväri
+        <input type="color" id="bgColor" value="#fff7fa">
+      </label>
+      <label>Varjo
+        <input type="range" id="shadowRange" min="0" max="60" value="40">
+      </label>
+      <label>Kulmat
+        <input type="range" id="radiusRange" min="10" max="60" value="35">
+      </label>
+      <label>Kehys
+        <input type="color" id="borderColor" value="#ffdcec">
+      </label>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <button onclick="addInnerBox()">➕ Lisää pieni laatikko</button>
+      <button onclick="saveAll()">💾 Tallenna</button>
+      <button onclick="resetAll()">↩ Palauta</button>
+    </div>
+
+    <!-- Inner boxes -->
+    <div class="inner-grid" id="innerGrid">
+      <div class="inner-box" draggable="true">
+        <div class="inner-header">
+          <div class="inner-title" contenteditable="true">🌸 KANSAINVÄLINEN LAATU</div>
+          <div class="color-picker">
+            <input type="color" value="#ffffff" onchange="changeInnerBg(this)">
+            <input class="icon-input" maxlength="2" placeholder="✨" oninput="addIcon(this)">
+            <button class="delete-btn" onclick="deleteInnerBox(this)">Poista</button>
+          </div>
+        </div>
+        <div class="inner-text" contenteditable="true">
+          Sovelletaan Euroopan huippukennelien parhaita oppeja ja sukulinjoja.
+        </div>
+      </div>
+    </div>
+
+    <div class="resize-handle" id="resizeHandle"></div>
+  </div>
+
+</body>
+</html>
